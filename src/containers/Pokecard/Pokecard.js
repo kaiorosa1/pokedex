@@ -4,8 +4,13 @@ class Pokecard extends React.Component {
     
     render(){
         return (
-            <div>
-
+            <div className="Pokecard">
+                name
+                <br />
+                img
+                <br />
+                type
+                <br />
             </div>
         );
     }
