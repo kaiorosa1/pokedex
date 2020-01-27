@@ -6,7 +6,7 @@ class Pokedex extends React.Component {
     render(){
         return (
             <div>
-                <Pokecard />
+                <Pokecard name="Charmander" type="fire" base_experience={62}/>
             </div>
         );
     }

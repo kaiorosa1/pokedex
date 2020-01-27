@@ -1,15 +1,15 @@
 import React from 'react';
 
 class Pokecard extends React.Component {
-    
     render(){
+        const {name, type, base_experience} = this.props;
         return (
             <div className="Pokecard">
-                name
+                {name}
                 <br />
-                img
+                {type}
                 <br />
-                type
+                {base_experience}
                 <br />
             </div>
         );
