@@ -1,15 +1,17 @@
 import React from 'react';
-
+const POKE_API = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/`;
 class Pokecard extends React.Component {
     render(){
-        const {name, type, base_experience} = this.props;
+        const {id,name, type, base_experience} = this.props;
+        let imgSrc = `${POKE_API}${id}.png`;
         return (
             <div className="tc bg-moon-gray dib pa3 ma2 grow bw2 shadow-5">
-                {name}
+                <span className="f3 blue">{name}</span>
                 <br />
-                {/* <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${key}.png.`} alt={name}/>
-                 */}
-                 {type}
+                <div>
+                    <img src={imgSrc} alt={name} />
+                </div>
+                {type}
                 <br />
                 {base_experience}
                 <br />

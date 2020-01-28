@@ -3,10 +3,11 @@ import Pokecard from '../Pokecard/Pokecard';
 
 class Pokedex extends React.Component {
     render(){
-        const cardArray = this.props.cards.map((card) => {
+        const cardArray = this.props.cards.map((card,i) => {
             return (
                     <div class="fl w-100 w-third-ns pa2">
-                        <Pokecard key={card.id} 
+                        <Pokecard key={i} 
+                            id={card.id}
                             name={card.name}
                             type={card.type} 
                             base_experience={card.base_experience}
